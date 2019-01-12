@@ -1,3 +1,5 @@
+var os = require("../modules/OSinfo") // zaimportowanie modułu "os"
+
 process.stdin.setEncoding("utf-8"); // ustawienie odpowiedniego enkodowania, odczytanie wartości jako string kodowany z utf-8
 
 process.stdin.on("readable", function() { // ustawienie nasłuchiwania na zdarzenia odczytu za pomocą .on
@@ -20,6 +22,10 @@ process.stdin.on("readable", function() { // ustawienie nasłuchiwania na zdarze
           process.stdout.write("The language of your operating system is: " + process.env.lang + "\n");
           process.exit();
           break;
+
+        case "/getOSinfo":
+          os.print();
+        break;        
 
         default:
           process.stderr.write("Wrong instruction!\n");
