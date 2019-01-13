@@ -1,4 +1,5 @@
 var os = require("os"); // zaimportowanie modułu "os"
+var time = require("../modules/conversionTime"); // zaimportowanie modułu conversionTime z folderu "modules"
 
 function getOSinfo () {
   var type =  os.type();
@@ -14,7 +15,7 @@ function getOSinfo () {
   console.log("System: ", type);
   console.log("Release: ", release);
   console.log("CPU Model: ", cpu);
-  console.log("Uptime: ", (uptime / 60).toFixed(0), " min");
+  console.log("Uptime: ", time.print(uptime));
   console.log("User info: ", userInfo.username);
   console.log("Home dir: ", userInfo.homedir);
 }
