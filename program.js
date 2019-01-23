@@ -17,7 +17,7 @@ process.stdin.on("readable", function() { // ustawienie nasłuchiwania na zdarze
           break;
 
         case "/language":
-          process.stdout.write("The language of your operating system is: " + process.env.lang + "\n");
+          process.stdout.write("The language of your operating system is: " + process.env.LANG + "\n");
           process.exit();
           break;
 
