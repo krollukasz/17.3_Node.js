@@ -1,4 +1,5 @@
-var os = require("../modules/OSinfo") // zaimportowanie modułu "os"
+var os = require("os"); // zaimportowanie modułu os
+var OSinfo = require("./OSinfo"); // zaimportowanie modułu OSinfo
 
 process.stdin.setEncoding("utf-8"); // ustawienie odpowiedniego enkodowania, odczytanie wartości jako string kodowany z utf-8
 
