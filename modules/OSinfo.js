@@ -1,5 +1,5 @@
 var os = require("os"); // zaimportowanie modułu "os"
-var conversionTime = require("../modules/conversionTime"); // zaimportowanie modułu conversionTime z folderu "modules"
+var conversionTime = require("./conversionTime"); // zaimportowanie modułu conversionTime z folderu "modules"
 
 function getOSinfo () {
   var type =  os.type();
