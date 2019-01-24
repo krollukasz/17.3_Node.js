@@ -1,5 +1,5 @@
 var os = require("os"); // zaimportowanie modułu "os"
-var time = require("../modules/conversionTime"); // zaimportowanie modułu conversionTime z folderu "modules"
+var conversionTime = require("../modules/conversionTime"); // zaimportowanie modułu conversionTime z folderu "modules"
 
 function getOSinfo () {
   var type =  os.type();
@@ -10,12 +10,13 @@ function getOSinfo () {
   }
   var release = os.release();
   var cpu = os.cpus()[0].model;
-  var uptime = os.uptime();
+  // var uptime = os.uptime();
   var userInfo = os.userInfo();
   console.log("System: ", type);
   console.log("Release: ", release);
   console.log("CPU Model: ", cpu);
-  console.log("Uptime: ", time.print(uptime));
+  conversionTime.conversionTime();
+  // console.log("Uptime: ", conversionTime());
   console.log("User info: ", userInfo.username);
   console.log("Home dir: ", userInfo.homedir);
 }
