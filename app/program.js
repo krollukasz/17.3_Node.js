@@ -1,5 +1,5 @@
 var os = require("os"); // zaimportowanie modułu os
-var OSinfo = require("./OSinfo"); // zaimportowanie modułu OSinfo
+var OSinfo = require("../modules/OSinfo"); // zaimportowanie modułu OSinfo
 
 process.stdin.setEncoding("utf-8"); // ustawienie odpowiedniego enkodowania, odczytanie wartości jako string kodowany z utf-8
 
@@ -25,7 +25,7 @@ process.stdin.on("readable", function() { // ustawienie nasłuchiwania na zdarze
           break;
 
         case "/getOSinfo":
-          os.print();
+          OSinfo.print();
         break;        
 
         default:
